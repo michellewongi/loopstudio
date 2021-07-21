@@ -1,0 +1,233 @@
+/* global properties */
+body, html {
+  color: white;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, button, .menu-links {
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Header */
+header {
+  background-image: url(images/desktop/image-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0 2em;
+}
+
+h1 {
+  border: 2.5px solid white;
+  font-size: 2.5em;
+  padding: 0.75em 2em 0.75em 0.75em;
+}
+
+.hero {
+  padding: 15em 0;
+}
+
+/* navigation bar */
+.close-icon {
+  display: none;
+}
+
+.hamburger {
+  position: fixed;
+  top: 3em;
+  right: 2em;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  z-index: 2;
+}
+
+.main-logo {
+  position: absolute;
+  top: 3em;
+}
+
+.logo {
+  width: 40%;
+}
+
+.wrapper {
+  background: black;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  z-index: 1;
+}
+
+.menu {
+  display: grid;
+  grid-template-rows: repeat(5, 80px);
+  padding: 1em;
+  justify-content: start;
+}
+
+.menu-links {
+  color: white;
+  font-size: 2em;
+  margin: 2em 1em;
+}
+
+.menu-logo {
+  padding-left: 2em;
+}
+
+.show-menu {
+  transform: translateY(0);
+}
+
+/* Main Content */
+main {
+  background: white;
+  padding: 3em 0;
+}
+
+/* Brand Info */
+h2 {
+  color: hsl(0, 0%, 41%);
+  font-size: 2em;
+  text-align: center;
+}
+
+.brand {
+  padding: 6em 2em 0;
+  text-align: center;
+}
+
+.brand-info {
+  padding: 1em;
+}
+
+.brand-pg {
+  color: hsl(0, 0%, 55%);
+  line-height: 2;
+}
+
+.interactivity {
+  width: 100%;
+  padding-bottom: 1.5em;
+}
+
+/* Gallery */
+button {
+  background-color: white;
+  border: 1.5px solid black;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 25px auto;
+  padding: 0.75em 3em;
+  position: absolute;
+}
+
+.gallery {
+  padding: 3em 2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(8, 120px);
+  text-transform: uppercase;
+  row-gap: 30px;
+}
+
+.item {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  position: relative;
+  top: 1.5em;
+  left: 1em;
+  width: 40%;
+}
+
+.deep-earth {
+  background-image: url(images/desktop/image-deep-earth.jpg);
+  background-size: cover;
+  background-position: 60% 75%;
+}
+
+.night-arcade {
+  background-image: url(images/desktop/image-night-arcade.jpg);
+  background-size: 60%;
+  background-position: 97% 45%;
+}
+
+.soccor-vr {
+  background-image: url(images/desktop/image-soccer-team.jpg);
+  background-size: cover;
+  background-position: 0 8%;
+}
+
+.the-grid {
+  background-image: url(images/desktop/image-grid.jpg);
+  background-size: cover;
+  background-position: 0 40%;
+}
+
+.the-grid p {
+  top: 2.5em;
+}
+
+.above-vr {
+  background-image: url(images/desktop/image-from-above.jpg);
+  background-size: 100% auto;
+  background-position: 0 20%;
+}
+
+.pocket-borealis {
+  background-image: url(images/desktop/image-pocket-borealis.jpg);
+  background-size: cover;
+  background-position: 0 30%;
+}
+
+.curiosity {
+  background-image: url(images/desktop/image-curiosity.jpg);
+  background-size: cover;
+  background-position: 0 10%;
+}
+
+.fisheye {
+  background-image: url(images/desktop/image-fisheye.jpg);
+  background-size: cover;
+  background-position: 0 75%;
+}
+
+.seeall {
+  display: flex;
+  justify-content: center;
+}
+
+/* footer */
+footer {
+  background: black;
+  text-align: center;
+  padding: 4em 0;
+}
+
+.footer-logo, .additional-info {
+  padding-bottom: 2em;
+}
+
+.copyright {
+  color: hsl(0, 0%, 41%)
+}
+
+.contacts img{
+  padding: 0 0.5rem;
+}
+
+.attribution {
+  color: black;
+}

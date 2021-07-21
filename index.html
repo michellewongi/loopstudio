@@ -1,59 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Loopstudios landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+  <header>
+    <nav>
+      <a href="#"><img class="logo main-logo" src="images/logo.svg" alt=""></a>
+      <div class="wrapper">
+        <div class="menu">
+          <a href="#"><img class="logo menu-logo" src="images/logo.svg" alt=""></a>
+          <a class="menu-links" href="#">About</a>
+          <a class="menu-links" href="#">Careers</a>
+          <a class="menu-links" href="#">Events</a>
+          <a class="menu-links" href="#">Products</a>
+          <a class="menu-links" href="#">Support</a>
+        </div>
+      </div>
 
-  Immersive experiences that deliver
+      <div class="hamburger">
+        <img class="hamburger-icon" src="images/icon-hamburger.svg" alt="">
+        <img class="close-icon" src="images/icon-close.svg" alt="">
+      </div>
+    </nav>
 
-  The leader in interactive VR
+    <div class="hero">
+      <h1>Immersive experiences that deliver</h1>
+    </div>
+  </header>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+  <main>
+    <section class="brand">
+      <img class="interactivity" src="images/desktop/image-interactive.jpg" alt="">
+      <div class="brand-info">
+        <h2>The leader in interactive VR</h2>
+        <p class="brand-pg">Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning
+          creations have transformed businesses through digital experiences that bind
+          to their brand.</p>
+      </div>
+    </section>
 
-  Our creations
+    <section class="gallery">
+      <h2>Our creations</h2>
 
-  See all
+      <div class="grid">
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+        <div class="deep-earth">
+          <p class="item">Deep earth</p>
+        </div>
+        <div class="night-arcade">
+          <p class="item">Night arcade</p>
+        </div>
+        <div class="soccor-vr">
+          <p class="item">Soccer team VR</p>
+        </div>
+        <div class="the-grid">
+          <p class="item">The grid</p>
+        </div>
+        <div class="above-vr">
+          <p class="item">From up above VR</p>
+        </div>
+        <div class="pocket-borealis">
+          <p class="item">Pocket borealis</p>
+        </div>
+        <div class="curiosity">
+          <p class="item">The curiosity</p>
+        </div>
+        <div class="fisheye">
+          <p class="item">Make it fisheye</p>
+        </div>
 
-  About
-  Careers
-  Events
-  Products
-  Support
+      </div>
+      <div class="seeall">
+        <button type="button" name="button">See all</button>
+      </div>
+    </section>
+  </main>
 
-  © 2021 Loopstudios. All rights reserved.
+
+  <footer>
+    <a href="#"><img class="logo footer-logo" src="images/logo.svg" alt=""></a>
+    <div class="additional-info">
+      <p>About</p>
+      <p>Careers</p>
+      <p>Events</p>
+      <p>Products</p>
+      <p>Support</p>
+    </div>
+
+    <div class="contacts">
+      <a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a>
+      <a href="#"><img src="images/icon-twitter.svg" alt="twitter"></a>
+      <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest"></a>
+      <a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a>
+    </div>
+
+    <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
+  </footer>
+
+
+
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Michelle W</a>.
   </div>
+
+  <script src="script.js" charset="utf-8"></script>
 </body>
+
 </html>
