@@ -265,7 +265,7 @@ footer {
     flex-direction: row;
     position: absolute;
     left: 60em;
-    bottom: 41em;
+    bottom: 44em;
   }
 
   .menu-links {
@@ -304,7 +304,7 @@ footer {
   button {
     height: 30px;
     width: 10%;
-    top: 110em;
+    top: 109em;
     left: 81em;
     text-align: center;
   }
