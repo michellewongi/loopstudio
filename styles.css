@@ -13,6 +13,11 @@ h1, h2, button, .menu-links {
   text-transform: uppercase;
 }
 
+:root {
+  --primary: rgba(36, 36, 36, 0.5);
+  --secondary: rgba(36, 36, 36, 0);
+}
+
 /* Header */
 header {
   background-image: url(images/desktop/image-hero.jpg);
@@ -52,7 +57,7 @@ h1 {
 }
 
 .logo {
-  width: 40%;
+  width: 10rem;
 }
 
 .wrapper {
@@ -81,6 +86,7 @@ h1 {
 }
 
 .menu-logo {
+  padding-top: 2em;
   padding-left: 2em;
 }
 
@@ -94,7 +100,7 @@ main {
   padding: 3em 0;
 }
 
-/* Brand Info */
+  /* Brand Info */
 h2 {
   color: hsl(0, 0%, 41%);
   font-size: 2em;
@@ -120,7 +126,7 @@ h2 {
   padding-bottom: 1.5em;
 }
 
-/* Gallery */
+  /* Gallery */
 button {
   background-color: white;
   border: 1.5px solid black;
@@ -153,27 +159,23 @@ button {
 }
 
 .deep-earth {
-  background-image: url(images/desktop/image-deep-earth.jpg);
-  background-size: cover;
-  background-position: 60% 75%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-deep-earth.jpg) no-repeat 60% 70% / cover;
 }
 
 .night-arcade {
-  background-image: url(images/desktop/image-night-arcade.jpg);
-  background-size: 60%;
-  background-position: 97% 45%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-night-arcade.jpg) repeat 97% 45% / cover;
 }
 
 .soccor-vr {
-  background-image: url(images/desktop/image-soccer-team.jpg);
-  background-size: cover;
-  background-position: 0 8%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-soccer-team.jpg) no-repeat 0 8% / cover;
 }
 
 .the-grid {
-  background-image: url(images/desktop/image-grid.jpg);
-  background-size: cover;
-  background-position: 0 40%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-grid.jpg) no-repeat 0 40% / cover;
 }
 
 .the-grid p {
@@ -181,27 +183,23 @@ button {
 }
 
 .above-vr {
-  background-image: url(images/desktop/image-from-above.jpg);
-  background-size: 100% auto;
-  background-position: 0 20%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-from-above.jpg) no-repeat 0 20% / cover;
 }
 
 .pocket-borealis {
-  background-image: url(images/desktop/image-pocket-borealis.jpg);
-  background-size: cover;
-  background-position: 0 30%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-pocket-borealis.jpg) no-repeat 0 30% / cover;
 }
 
 .curiosity {
-  background-image: url(images/desktop/image-curiosity.jpg);
-  background-size: cover;
-  background-position: 0 10%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-curiosity.jpg) no-repeat 0 10% / cover;
 }
 
 .fisheye {
-  background-image: url(images/desktop/image-fisheye.jpg);
-  background-size: cover;
-  background-position: 0 75%;
+  background: linear-gradient(to right, var(--primary), var(--secondary)),
+    url(images/desktop/image-fisheye.jpg) no-repeat 0 75% / cover;
 }
 
 .seeall {
@@ -224,10 +222,137 @@ footer {
   color: hsl(0, 0%, 41%)
 }
 
-.contacts img{
+.contacts img {
   padding: 0 0.5rem;
 }
 
 .attribution {
   color: black;
+}
+
+/* Desktop Layout */
+@media (min-width: 1440px) {
+  /* Header */
+  h1 {
+    font-size: 3.5em;
+    padding-right: 0;
+    width: 40%;
+  }
+
+  .hero {
+    padding: 13em 9em 8em;
+  }
+
+  .main-logo {
+    left: 10em;
+  }
+
+  /* navigation bar */
+  .hamburger, .menu-logo, .show-menu {
+    display: none;
+  }
+
+  .wrapper {
+    background: none;
+    position: absolute;
+    transform: translateY(0);
+    transition: none;
+    top: 4em;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 60em;
+    bottom: 41em;
+  }
+
+  .menu-links {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+  }
+
+/* Main content */
+  /* Brand Info*/
+  h2 {
+    font-size: 2.5em;
+    text-align: left;
+  }
+
+  .brand {
+    padding: 6em 10em;
+    text-align: left;
+  }
+
+  .interactivity {
+    width: 60%;
+  }
+
+  .brand-info {
+    background: white;
+    bottom: 20em;
+    height: 300px;
+    left: 35em;
+    padding: 3em 4em;
+    position: relative;
+    width: 40%;
+    z-index: 1;
+  }
+
+  /* Gallery */
+  button {
+    height: 30px;
+    width: 10%;
+    top: 110em;
+    left: 81em;
+    text-align: center;
+  }
+  .gallery {
+    padding: 0 10em;
+    margin-top: -18em;
+  }
+
+  .grid {
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: 350px 350px;
+    padding: 1em 0 5em;
+    justify-content: center;
+  }
+
+  .item, .the-grid p {
+    top: 11.5em;
+    width: 50%;
+  }
+
+/* Footer */
+  footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 6em 10em 1em;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .additional-info {
+    display: flex;
+    flex-direction: row;
+    order: 3;
+  }
+
+  .additional-info > p {
+    padding-right: 2em;
+  }
+
+  .contacts {
+    text-align: right;
+    order: 2;
+  }
+
+  .copyright {
+    order: 4;
+  }
+
 }

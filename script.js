@@ -20,8 +20,17 @@ function toggleMenu() {
 
 var menuLinks = document.querySelectorAll(".menu-links");
 
-menuLinks.forEach(
-  function(menuLink) {
-    menuLink.addEventListener("click", toggleMenu);
-  }
-)
+if (window.innerWidth <= 1440) {
+  menuLinks.forEach(
+    function(menuLink) {
+      menuLink.addEventListener("click", toggleMenu);
+    }
+  )
+}
+if (window.innerWidth >= 1440) {
+  menuLinks.forEach(
+    function(menuLink) {
+      menuLink.removeEventListener("click", toggleMenu);
+    }
+  )
+}
