@@ -28,7 +28,7 @@ header {
 
 h1 {
   border: 2.5px solid white;
-  font-size: 4em;
+  font-size: 2.5em;
   padding: 0.75em 2em 0.75em 0.75em;
 }
 
@@ -133,7 +133,7 @@ button {
   font-size: 0.9em;
   font-weight: bold;
   margin: 25px auto;
-  padding: 0.75em 1em;
+  padding: 0.75em 3em;
   position: absolute;
 }
 
@@ -234,17 +234,13 @@ footer {
 @media (min-width: 1440px) {
   /* Header */
   h1 {
-    font-size: 5em;
+    font-size: 3.5em;
     padding-right: 0;
-    width: 55%;
+    width: 40%;
   }
 
   .hero {
-    padding: 13em 9em 12em;
-  }
-
-  .logo {
-    width: 15rem;
+    padding: 13em 9em 8em;
   }
 
   .main-logo {
@@ -269,13 +265,12 @@ footer {
     flex-direction: row;
     position: absolute;
     left: 60em;
-    bottom: 44em;
+    bottom: 36em;
   }
 
   .menu-links {
     font-family: 'Alata', sans-serif;
-    font-size: 1rem;
-    text-transform: none;
+    font-size: 0.9rem;
   }
 
 /* Main content */
@@ -308,9 +303,9 @@ footer {
   /* Gallery */
   button {
     height: 30px;
-    width: 8%;
-    top: 123em;
-    left: 83em;
+    width: 10%;
+    top: 109em;
+    left: 81em;
     text-align: center;
   }
   .gallery {
