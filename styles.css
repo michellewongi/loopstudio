@@ -520,4 +520,8 @@ Footer
     order: 4;
     margin: 0;
   }
+
+  .attribution {
+    height: 2px;
+  }
 }
