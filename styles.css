@@ -1,3 +1,15 @@
+/*===================
+Table of Content
+
+1. Global Properties
+2. Header
+  2a. Navigation Bar
+3. Main Section
+  3a. Brand Info
+  3b. Gallery
+4. Footer
+5. Media Queries
+====================*/
 /* ==========
   Global Properties
   ==========*/
@@ -29,15 +41,15 @@ h1, h2, button, .menu-links {
   Header
   ==========*/
 header {
-  background-image: url(images/desktop/image-hero.jpg);
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/desktop/image-hero.jpg);
   padding: 0 2em;
 }
 
 h1 {
   border: 2.5px solid white;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   padding: 0.75em 2em 0.75em 0.75em;
 }
 
@@ -79,7 +91,7 @@ h1 {
   left: 0;
   right: 0;
   position: fixed;
-  transform: translateY(-100%);
+  transform: translateY(-160%);
   transition: transform 0.2s;
   z-index: 1;
 }
@@ -93,7 +105,7 @@ h1 {
 
 .menu-links {
   color: white;
-  font-size: 2em;
+  font-size: 2rem;
   margin: 2em 1em;
 }
 
@@ -148,11 +160,14 @@ h2 {
 button {
   background-color: white;
   border: 1.5px solid black;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
-  margin: 25px auto;
-  padding: 0.75em 3em;
-  position: absolute;
+  margin: 40px auto;
+  padding: 0.75em 2.5em;
+}
+
+.desktop-button {
+  display: none;
 }
 
 .gallery {
@@ -169,11 +184,14 @@ button {
 
 .item {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.5em;
-  position: relative;
-  top: 1.5em;
-  left: 1em;
-  width: 40%;
+  font-size: 1.5rem;
+  width: 60%;
+  padding-left: 1em;
+}
+
+.photo {
+  display: flex;
+  align-items: flex-end;
 }
 
 .deep-earth {
@@ -194,10 +212,6 @@ button {
 .the-grid {
   background: linear-gradient(to right, var(--primary), var(--secondary)),
     url(images/desktop/image-grid.jpg) no-repeat 0 40% / cover;
-}
-
-.the-grid p {
-  top: 2.5em;
 }
 
 .above-vr {
@@ -232,6 +246,7 @@ footer {
   background: black;
   text-align: center;
   padding: 4em 0;
+  margin-top: -5em;
 }
 
 .footer-logo, .additional-info {
@@ -251,22 +266,28 @@ footer {
   margin-bottom: 0;
 }
 
+.additional-info>a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em 0 0;
+}
+
 /* ==========
   Media Queries
   ==========*/
 @media (min-width: 31.25em) and (max-width: 45em) {
 
   /* ==========
-  Header
-  ==========*/
+Header
+==========*/
   h1 {
     text-align: center;
     padding: 1em;
   }
 
   /* ==========
-  Gallery
-  ==========*/
+Gallery
+==========*/
   .grid {
     grid-template-rows: repeat(8, 160px);
   }
@@ -278,11 +299,11 @@ footer {
   }
 
   /* ==========
-  Header
-  ==========*/
+Header
+==========*/
   h1 {
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em;
   }
 
   .hero {
@@ -291,15 +312,15 @@ footer {
   }
 
   /* ==========
-  Brand Info
-  ==========*/
+Brand Info
+==========*/
   .brand-info {
     margin: 0 auto;
   }
 
   /* ==========
-  Gallery
-  ==========*/
+Gallery
+==========*/
   .gallery {
     display: flex;
     flex-direction: column;
@@ -313,44 +334,40 @@ footer {
 }
 
 @media (min-width: 62.5em) {
-
-  /* ==========
-  Global Properties
-  ==========*/
-  h1 {
-    font-size: 3vw;
+  body {
+    font-size: 18px;
   }
 
   h2 {
-    font-size: 2vw;
-  }
-
-  p {
-    font-size: 1.2vw;
+    font-size: 2.5vw;
+    text-align: left;
   }
 
   /* ==========
-  Header
-  ==========*/
+Header
+==========*/
   h1 {
-    font-size: 3.5em;
+    font-size: 3.3rem;
+    font-weight: normal;
     padding: 1em 2em 1em 0.75em;
-    max-width: 450px;
+    max-width: 35vw;
     text-align: left;
   }
 
   .main-logo {
-    left: 10em;
+    top: 4em;
+    left: 8em;
+    width: 14em;
   }
 
   .hero {
     display: block;
-    padding-left: 8em;
+    padding: 12em 0 5em 6em;
   }
 
   /* ==========
-      Navigation Bar
-      ==========*/
+    Navigation Bar
+    ==========*/
   .hamburger, .menu-logo, .show-menu {
     display: none;
   }
@@ -367,39 +384,53 @@ footer {
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 5em;
-    top: -3.5em;
+    right: 4em;
+    top: -2.5em;
   }
 
   .menu-links {
     font-family: 'Alata', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: none;
+  }
+
+  .menu-links:hover {
+    border-bottom: 3px solid white;
   }
 
   /* ==========
 Main Content
 ==========*/
   /* ==========
-    Brand Info
-    ==========*/
+  Brand Info
+  ==========*/
   .brand {
-    padding: 8em 8em 26em;
+    display: grid;
+    grid-template-columns: 1fr 1em 1.25fr;
+    grid-template-rows: 9em 1fr;
+    padding: 6em;
     text-align: left;
+  }
+
+  .brand-pg {
+    font-size: 1.3vw;
   }
 
   .interactivity {
     max-width: 50vw;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
   }
 
   .brand-info {
     display: block;
     background: white;
     padding: 3em 4em;
-    position: absolute;
-    right: 3vw;
-    top: 73em;
-    max-width: 40vw;
+    grid-row: -2/-1;
+    grid-column: -3/-1;
+    max-width: 60vw;
+    min-width: 40vw;
+    height: auto;
     z-index: 1;
   }
 
@@ -407,47 +438,60 @@ Main Content
   Gallery
   ==========*/
   button {
-    height: 30px;
-    max-width: 12em;
-    top: 105em;
-    right: 11.5vw;
-    padding: 1em 1em 1.5em;
-    text-align: center;
+    font-size: 1rem;
+    text-align: right;
+    margin: 0;
+  }
+
+  button:hover {
+    background: black;
+    color: white;
+    transition: 0.5s ease;
   }
 
   .gallery {
-    padding: 0 11.5em;
-    margin-top: -18em;
+    padding: 0 8em 6em;
   }
 
-  .gallery>h2 {
-    position: relative;
-    right: 28vw;
+  .gallery-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-button {
+    display: none;
+  }
+
+  .desktop-button {
+    display: block;
   }
 
   .grid {
-    grid-gap: 30px;
-    grid-template-columns: repeat(4, 17vw);
-    grid-template-rows: 350px 350px;
-    padding: 1em 0 5em;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-template-rows: minmax(400px, 1fr) minmax(400px, 1fr);
+    padding: 1em 0 8em;
     margin: 0 auto;
     justify-content: center;
-    max-width: 70%;
+    width: auto;
   }
 
-  .item, .the-grid p {
-    top: 10.5em;
-    width: 60%;
+  .photo:hover {
+    transition: 0.2s ease;
+    opacity: 0.8;
+    transform: scale(1.1);
   }
 
   /* ==========
-  Footer
-  ==========*/
+Footer
+==========*/
   footer {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    padding: 6em 10em 1em;
+    padding: 6em 4em 1em 8em;
     text-align: left;
     justify-content: space-between;
   }
@@ -459,7 +503,11 @@ Main Content
   }
 
   .additional-info>p {
-    padding-right: 2em;
+    padding-right: 1em;
+  }
+
+  .footer-links:hover {
+    border-bottom: 3px solid white;
   }
 
   .contacts {
@@ -468,7 +516,8 @@ Main Content
   }
 
   .copyright {
+    text-align: right;
     order: 4;
+    margin: 0;
   }
-
 }
