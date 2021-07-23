@@ -50,7 +50,7 @@ header {
 h1 {
   border: 2.5px solid white;
   font-size: 2.5rem;
-  padding: 0.75em 2em 0.75em 0.75em;
+  padding: 0.5em 1em 0.5em 0em;
 }
 
 .hero {
@@ -353,9 +353,9 @@ Gallery
 Header
 ==========*/
   h1 {
-    font-size: 3.3rem;
+    font-size: 4.2rem;
     font-weight: normal;
-    padding: 1em 2em 1em 0.75em;
+    padding: 0.5em 2em 0.5em 0.75em;
     max-width: 35vw;
     text-align: left;
   }
