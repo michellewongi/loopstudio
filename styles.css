@@ -10,15 +10,22 @@ Table of Content
 4. Footer
 5. Media Queries
 ====================*/
+
+
 /* ==========
   Global Properties
   ==========*/
+:root {
+  --primary: rgba(36, 36, 36, 0.5);
+  --secondary: rgba(36, 36, 36, 0);
+}
+
 body, html {
   color: white;
   font-family: 'Alata', sans-serif;
   font-size: 15px;
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 100%;
 }
 
@@ -26,11 +33,6 @@ h1, h2, button, .menu-links {
   font-family: 'Josefin Sans', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-:root {
-  --primary: rgba(36, 36, 36, 0.5);
-  --secondary: rgba(36, 36, 36, 0);
 }
 
 .container {
@@ -41,9 +43,9 @@ h1, h2, button, .menu-links {
   Header
   ==========*/
 header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/desktop/image-hero.jpg);
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/desktop/image-hero.jpg);
   padding: 0 2em;
 }
 
@@ -54,8 +56,8 @@ h1 {
 }
 
 .hero {
-  padding: 15em 0;
   min-width: 300px;
+  padding: 15em 0;
 }
 
 /* ==========
@@ -66,11 +68,11 @@ h1 {
 }
 
 .hamburger {
-  position: fixed;
-  top: 3em;
-  right: 2em;
   cursor: pointer;
   height: 2em;
+  position: absolute;
+  right: 2em;
+  top: 3em;
   width: 2em;
   z-index: 2;
 }
@@ -150,8 +152,8 @@ h2 {
 }
 
 .interactivity {
-  width: 100%;
   padding-bottom: 1.5em;
+  width: 100%;
 }
 
 /* ==========
@@ -184,20 +186,20 @@ button:hover {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(8, 120px);
-  text-transform: uppercase;
   row-gap: 30px;
+  text-transform: uppercase;
 }
 
 .item {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
-  width: 60%;
   padding-left: 1em;
+  width: 60%;
 }
 
 .photo {
-  display: flex;
   align-items: flex-end;
+  display: flex;
 }
 
 .deep-earth {
@@ -274,12 +276,8 @@ footer {
 
 .additional-info>a {
   color: white;
-  text-decoration: none;
   margin: 0 1em 0 0;
-}
-
-.footer-links:hover {
-  border-bottom: 3px solid white;
+  text-decoration: none;
 }
 
 /* ==========
@@ -332,10 +330,10 @@ Brand Info
 Gallery
 ==========*/
   .gallery {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   .grid {
@@ -355,14 +353,14 @@ Header
   h1 {
     font-size: 4.2rem;
     font-weight: normal;
-    padding: 0.5em 2em 0.5em 0.75em;
     max-width: 35vw;
+    padding: 0.5em 2em 0.5em 0.75em;
     text-align: left;
   }
 
   .main-logo {
-    top: 4em;
     left: 8em;
+    top: 4em;
     width: 14em;
   }
 
@@ -381,27 +379,42 @@ Header
   .wrapper {
     background: none;
     position: absolute;
+    top: 4em;
     transform: translateY(0);
     transition: none;
-    top: 4em;
   }
 
   .menu {
     display: flex;
     flex-direction: row;
-    position: absolute;
     right: 4em;
+    position: absolute;
     top: -2.5em;
   }
 
-  .menu-links {
+  .menu-links, .footer-links {
     font-family: 'Alata', sans-serif;
     font-size: 1rem;
+    position: relative;
     text-transform: none;
   }
 
-  .menu-links:hover {
-    border-bottom: 3px solid white;
+  .menu-links::after, .footer-links::after {
+    background: white;
+    content: "";
+    height: 3px;
+    left: 0;
+    margin-top: 0.4em;
+    position: absolute;
+    top: 100%;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+  }
+
+  .menu-links:hover::after, .footer-links:hover::after {
+    /* transform: scaleX(1); */
   }
 
   /* ==========
@@ -414,7 +427,7 @@ Main Content
     display: grid;
     grid-template-columns: 1fr 1em 1.25fr;
     grid-template-rows: 9em 1fr;
-    padding: 6em;
+    padding: 6em 8em;
     text-align: left;
   }
 
@@ -423,20 +436,21 @@ Main Content
   }
 
   .interactivity {
-    max-width: 50vw;
-    grid-row: 1/-1;
     grid-column: 1/-1;
+    grid-row: 1/-1;
+    max-width: 50vw;
+
   }
 
   .brand-info {
-    display: block;
     background: white;
-    padding: 3em 4em;
-    grid-row: -2/-1;
+    display: block;
     grid-column: -3/-1;
+    grid-row: -2/-1;
+    height: auto;
     max-width: 50vw;
     min-width: 20vw;
-    height: auto;
+    padding: 3em 4em;
     z-index: 1;
   }
 
@@ -445,8 +459,8 @@ Main Content
   ==========*/
   button {
     font-size: 1rem;
-    text-align: right;
     margin: 0;
+    text-align: right;
   }
 
   .gallery {
@@ -454,9 +468,9 @@ Main Content
   }
 
   .gallery-head {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
   }
 
@@ -483,9 +497,9 @@ Main Content
   }
 
   .photo:hover {
-    transition: 0.2s ease;
     opacity: 0.8;
     transform: scale(1.1);
+    transition: 0.2s ease;
   }
 
   /* ==========
@@ -495,9 +509,9 @@ Footer
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+    justify-content: space-between;
     padding: 3em 4em 1em 8em;
     text-align: left;
-    justify-content: space-between;
   }
 
   .additional-info {
@@ -511,14 +525,14 @@ Footer
   }
 
   .contacts {
-    text-align: right;
     order: 2;
+    text-align: right;
   }
 
   .copyright {
-    text-align: right;
     order: 4;
     margin: 0;
+    text-align: right;
   }
 
   .attribution {
