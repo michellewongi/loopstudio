@@ -299,8 +299,9 @@ footer {
 Header
 ==========*/
   h1 {
+    font-size: 3rem;
     text-align: left;
-    padding: 1.5em;
+    padding: 2em 1em 2em;
   }
 
   .hero {
@@ -377,7 +378,7 @@ Header
     background: none;
     position: absolute;
     top: 4em;
-    transform: translateY(0);
+    transform: translateY(10);
     transition: none;
   }
 
