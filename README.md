@@ -43,4 +43,3 @@ I want to continue learning about Javascript and get to the point of being comfo
 ## Author
 
 - Website - [Michelle Wong](https://michellewong.me/)
-- Frontend Mentor - [@mw3981](https://www.frontendmentor.io/profile/mw3981)
