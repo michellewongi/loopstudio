@@ -30,11 +30,8 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- Vanilla Javascript
+- CSS
+- Javascript
 
 ### Continued development
 
